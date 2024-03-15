@@ -1,0 +1,12 @@
+web.php
+
+   Route::get('admin/updatepassword',[AdminController::class,'updatepassword']);
+
+controller:
+
+
+    public function updatepassword(){
+        $r=Admin::find(1);
+        $r->password=Hash::make('info@123');
+        $r->save();
+    }
