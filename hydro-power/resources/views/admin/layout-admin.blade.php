@@ -10,6 +10,7 @@
   <title>@yield('page_title')</title>
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
   <link href="{{asset('admin_assets/css/nucleo-icons.css')}}" rel="stylesheet" />
+  <link href="{{asset('admin_assets/css/custom.css')}}" rel="stylesheet" />
   <link href="{{asset('admin_assets/css/nucleo-svg.css')}}" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
@@ -101,8 +102,15 @@
             <span class="nav-link-text ms-1">Contact</span>
           </a>
         </li>
-
-
+    <li class="nav-item border-top p-2">
+          <a class="nav-link text-white bg-green-600" href="{{url('admin/updatepsd')}}">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">settings</i>
+            </div>
+            <span class="nav-link-text ms-1">Update Password</span>
+          </a>
+        </li>
+        
         <li class="nav-item border-top p-2">
           <a class="nav-link text-white bg-gradient-primary" href="logout">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -136,6 +144,7 @@
  
   </main>
  
+<script src="https://cdn.tiny.cloud/1/YOUR_API_KEY/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
   <script src="{{asset('admin_assets/js/core/popper.min.js')}}"></script>
   <script src="{{asset('admin_assets/js/core/bootstrap.min.js')}}"></script>
@@ -273,7 +282,34 @@ $(document).ready(function () {
            });
        });
 
+    function addLink() {
+        var linkText = prompt("Enter the link text:");
+        if (linkText === null) {
+            return; // User clicked Cancel
+        }
+
+        var linkUrl = prompt("Enter the link URL:");
+        if (linkUrl === null) {
+            return; // User clicked Cancel
+        }
+
+        var textarea = document.getElementById("relevant_link");
+        var currentText = textarea.value;
+
+        // Insert the link at the current cursor position
+        var startPos = textarea.selectionStart;
+        var endPos = textarea.selectionEnd;
+
+  var newText =
+    currentText.substring(0, startPos) +
+    '<a href="' + linkUrl + '" target="_blank">' + linkText + '</a>' +'<br>'
+    currentText.substring(endPos);
+
+
+        textarea.value = newText;
+    }
     
+ 
    </script>
 
 

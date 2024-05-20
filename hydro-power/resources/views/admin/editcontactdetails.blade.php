@@ -23,7 +23,7 @@
                         @method('PUT')
 
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Address One</label>
                     <input type="text" name="address1" class="form-control" value="{{$contact_details['address1']}}">
@@ -33,7 +33,7 @@
                             </div>
 
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Address Two</label>
                     <input type="text" name="address2" class="form-control" value="{{$contact_details['address2']}}">
@@ -41,7 +41,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Phone One</label>
                     <input type="text" name="phone1" class="form-control" value="{{$contact_details['phone1']}}">
@@ -49,15 +49,15 @@
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
-                                <label for="modelyear">Phone One</label>
+                                <label for="modelyear">Phone Two</label>
                     <input type="text" name="phone2" class="form-control" value="{{$contact_details['phone2']}}">
 
                                 </div>
                             </div>
                             
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Email One</label>
                     <input type="text" name="email1" class="form-control" value="{{$contact_details['email1']}}">
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Email Two</label>
                     <input type="text" name="email2" class="form-control" value="{{$contact_details['email2']}}">
@@ -73,7 +73,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Facebook</label>
                     <input type="text" name="facebook" class="form-control" value="{{$contact_details['facebook']}}">
@@ -82,7 +82,7 @@
                             </div>
 
                             
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Instagram</label>
                     <input type="text" name="instagram" class="form-control" value="{{$contact_details['instagram']}}">
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Youtube</label>
                     <input type="text" name="youtube" class="form-control" value="{{$contact_details['youtube']}}">
@@ -98,7 +98,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Twitter</label>
                     <input type="text" name="twitter" class="form-control" value="{{$contact_details['twitter']}}">

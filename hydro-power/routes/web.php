@@ -49,6 +49,10 @@ Route::group(['middleware'=>'admin_auth'],function(){
 Route::get('admin/dashboard',[AdminController::class,'dashboard']);
 
 
+Route::get('admin/updatepsd', [AdminController::class, 'updatePasswordForm']);
+Route::post('admin/updatepsd', [AdminController::class, 'updatePassword'])->name('admin.update.password');
+
+
   Route::get('admin/company',[CompanyController::class,'index']);
   Route::get('admin/company',[CompanyController::class,'show']);
   Route::get('admin/add_companydetails',[CompanyController::class,'add_companydetails'])->name('add_company');

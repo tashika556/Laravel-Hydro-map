@@ -70,43 +70,50 @@ class GalleryController extends Controller
         $gallery_details = Gallery::with('photos')->find($id);
         return view('admin/editgallerydetails', compact('gallery_details'));
     }
+public function updategallerydetails(Request $request, $id)
+{
+    $request->validate([
+        'name' => 'required',
+        'featured_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+    ]);
 
-    public function updategallerydetails(Request $request, $id)
-    {
-        $request->validate([
-            'name' => 'required|string',
-            'featured_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:4096', // Update the max size
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2097152', // Update the max size
-        ]);
-        
-    
-        $gallery = Gallery::find($id);
-        $gallery->name = $request->name;
-    
-        // Update Cover Image
-        if ($request->hasFile('featured_image')) {
-            $coverImage = $request->file('featured_image');
-            $coverImageName = 'cover_' . time() . '.' . $coverImage->getClientOriginalExtension();
-            $coverImage->move(public_path('images'), $coverImageName);
-            $gallery->featured_image = $coverImageName;
-        }
-    
-        // Update Gallery Images
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $imageName = 'gallery_' . time() . '_' . $image->getClientOriginalName();
-                $image->move(public_path('images'), $imageName);
-    
-                // Assuming you have an Image model and a photos relationship
+    $gallery = Gallery::find($id);
+    $gallery->name = $request->name;
+
+    // Update Cover Image
+    if ($request->hasFile('featured_image')) {
+        $coverImage = $request->file('featured_image');
+        $coverImageName = 'cover_' . time() . '.' . $coverImage->getClientOriginalExtension();
+        $coverImage->move(public_path('images'), $coverImageName);
+        $gallery->featured_image = $coverImageName;
+    }
+
+    // Update or Add Gallery Images
+    if ($request->hasFile('images')) {
+        foreach ($request->file('images') as $image) {
+            $imageName = 'gallery_' . time() . '_' . $image->getClientOriginalName();
+            $image->move(public_path('images'), $imageName);
+
+            // Check if the image already exists
+            $existingImage = $gallery->photos()->where('image', $imageName)->first();
+
+            if ($existingImage) {
+                // If the image exists, update it
+                $existingImage->update(['image' => $imageName]);
+            } else {
+                // If the image doesn't exist, create a new one
                 $photo = new Image(['image' => $imageName]);
                 $gallery->photos()->save($photo);
             }
         }
-    
-        $gallery->update();
-    
-        return redirect()->back()->with('success', 'Gallery Details Updated Successfully');
     }
+
+    $gallery->update();
+
+    return redirect()->back()->with('success', 'Gallery Details Updated Successfully');
+}
+
     
     public function delete(Request $request,$id){
         $model=Gallery::find($id);

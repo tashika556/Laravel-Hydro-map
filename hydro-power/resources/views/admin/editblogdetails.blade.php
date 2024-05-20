@@ -23,7 +23,7 @@
                         @method('PUT')
 
                         <div class="row">
-                        <div class="col-4">
+                        <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Title</label>
                     <input type="text" name="title" class="form-control" value="{{$blog_details['title']}}">
@@ -32,7 +32,7 @@
                             </div>
 
                        
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="introduction">Description</label>
                                     <textarea name="description" class="form-control">{{$blog_details['description']}}</textarea>
@@ -40,7 +40,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Month</label>
                     <input type="text" name="month" class="form-control" value="{{$blog_details['month']}}">
@@ -48,7 +48,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Date</label>
                     <input type="text" name="date" class="form-control" value="{{$blog_details['date']}}">
@@ -57,18 +57,18 @@
                             </div>
 
                             
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="count_company">Year</label>
                     <input type="text" name="year" class="form-control" value="{{$blog_details['year']}}">
 
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="photos">Featured Image</label>
                     <input type="file" name="image" class="form-control">
-                    <img src="{{asset('uploads/blogdetails/'.$blog_details->image)}}">
+                    <img src="{{asset('public/uploads/blogdetails/'.$blog_details->image)}}">
 
                                 </div>
                             </div>

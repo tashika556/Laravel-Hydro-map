@@ -6,12 +6,12 @@
 @section('container')
 <div class="container-fluid">
     <div class="row">
-        <div class="col-10">
+        <div class="col-md-10 col-12">
      
                 @foreach($members as $company)
 
             <div class="row">
-                <div class="col-4">
+                <div class="col-md-4 col-12">
                     <div class="bg-white p-4">
                         <h1>Address</h1>
                     <p>

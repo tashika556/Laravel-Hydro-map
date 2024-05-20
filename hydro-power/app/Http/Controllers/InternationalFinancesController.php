@@ -57,13 +57,25 @@ class InternationalFinancesController extends Controller
 'fa fa-cloud',
 'fa fa-certificate',
 'fa fa-flag',
+'fa fa-filter',
+'fa fa-paper-plane',
 'fa fa-building',
+'fa fa-compass',
+'fa fa-backward',
+'fa fa-book-open',
 'fa fa-map-marker',
 'fa fa-bandcamp',
             // Add more shapes as needed
         ];
     
+        do {
+        // Pick a random icon
         $randomShapeIcon = $shapeIcons[array_rand($shapeIcons)];
+
+        // Check if the icon already exists in the database
+        $existingFinance = InternationalFinances::where('fin_icon', $randomShapeIcon)->first();
+    } while ($existingFinance);
+
 
         $finance_details->fin_icon = $randomShapeIcon;
     

@@ -30,7 +30,7 @@
 <!-- Add the following HTML for checkboxes -->
 <div class="filter_wrap">
 <div class="company_block divide-y p-3">
-        <h5 class="font-semibold mb-2 "> <span class="mr-1"><i class="fas fa-building" aria-hidden="true"></i></span> Company Name </h5>
+        <h5 class="font-semibold mb-2 "> <span class="mr-1"><i class="fas fa-building" aria-hidden="true"></i></span> Business/Enterprises Involved</h5>
         @foreach($data as $product)
             <div class="flex items-center py-3">
                 <input type="checkbox" class="company-checkbox input_width border-gray-300 rounded" value="{{ $product->id }}" />
@@ -43,7 +43,7 @@
         @endforeach
     </div>
     <div class="international_div divide-y p-3">
-        <h5 class="font-semibold mb-2 flex items-center"> <span class="international_icons"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl0XarROZzuUkPwHHjTJNTmabVws-ueQ4J4-TNACawmKAGiRoEIeVC6PllF0SS4Bo-jOE&usqp=CAU" alt=""></span> International Financiers </h5>
+        <h5 class="font-semibold mb-2 flex items-center"> <span class="international_icons"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl0XarROZzuUkPwHHjTJNTmabVws-ueQ4J4-TNACawmKAGiRoEIeVC6PllF0SS4Bo-jOE&usqp=CAU" alt=""></span> Financiers Involved </h5>
         @foreach($finances as $product)
             <div class="flex items-center  py-3">
                 <input type="checkbox" class="finance-checkbox input_width border-gray-300 rounded" value="{{ $product->id }}" />

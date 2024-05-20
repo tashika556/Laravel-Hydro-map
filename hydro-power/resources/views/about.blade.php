@@ -25,7 +25,7 @@
             <div class="md:col-start-2 md:col-span-5 col-span-1">
                 <div class="relative">
                     <div class="about_img">
-                        <img src="/uploads/aboutdetails/{{$product->photo}}" alt="" loading="lazy" class="object-cover border border-2">
+                        <img src="public/uploads/aboutdetails/{{$product->photo}}" alt="" loading="lazy" class="object-cover border border-2">
                     </div>
                     <div class="video_button">
                         <a href="{{ $product->video_url }}" id="play-video" class="video-play-button youtube">
@@ -76,7 +76,7 @@
                                 <h2 class="counter text-white" data-number="{{ $product->count_company}}"></h2>
                                 <h2 class="text-white">+</h2>
                             </div>
-                            <p class="text-white"> Lorem ipsum
+                            <p class="text-white"> Companies
                             </p>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                                 <h2 class="counter text-blue-800" data-number="{{ $product->count_intfinancier}}"></h2>
                                 <h2 class="text-blue-800">+</h2>
                             </div>
-                            <p class="text-gray-500"> Lorem ipsum
+                            <p class="text-gray-500"> International Financiers
                             </p>
                         </div>
                     </div>

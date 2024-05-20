@@ -36,7 +36,7 @@
                             <div class="form-group image-preview mb-4 border-bottom pb-4">
                                 <label for="title">Featured Image</label><br>
                                 <input type="file" name="featured_image" accept="image/*">
-        <img src="{{ asset('images/' . $gallery_details->featured_image) }}" alt="Cover Image">
+        <img src="{{ asset('public/images/' . $gallery_details->featured_image) }}" alt="Cover Image">
                             </div>
                         </div>
 
@@ -46,7 +46,7 @@
         <input type="file" name="images[]" accept="image/*" multiple>
         @foreach($gallery_details->photos as $photo)
         <div class="relative image-container">
-            <img src="{{ asset('images/' . $photo->image) }}" alt="Gallery Image">
+            <img src="{{ asset('public/images/' . $photo->image) }}" alt="Gallery Image">
             <span class="remove-icon remove-image-btn" data-image-id="{{ $photo->id }}"><i class="fa fa-times" aria-hidden="true"></i></span>
 
             </div>

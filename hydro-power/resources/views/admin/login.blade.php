@@ -69,9 +69,18 @@
                     <input type="text" name="user_name" class="form-control" required>
                   </div>
                   <div class="input-group input-group-outline mb-3">
-                    <label class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control" required>
-                  </div>
+                                        <label class="form-label">Password</label>
+                                        <div class="input-group">
+                                            <input type="password" id="password" name="password" class="form-control"
+                                                required>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"
+                                                    onclick="togglePasswordVisibility('password')">
+                                                    <i class="fas fa-eye" id="password_toggle"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
                   <div class="text-center">
                   <p class="text-danger"> {{session('error')}} </p>
                   <input type="submit"  class="btn bg-gradient-primary w-100 my-4 mb-2" name="submit" value="Sign In" style="cursor:pointer;">
@@ -86,6 +95,7 @@
   </main>
   <!--   Core JS Files   -->
   <script src="{{asset('admin_assets/js/core/popper.min.js')}}"></script>
+    <script src="{{asset('admin_assets/js/main.js')}}"></script>
   <script src="{{asset('admin_assets/js/core/bootstrap.min.js')}}"></script>
   <script src="{{asset('admin_assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
   <script src="{{asset('admin_assets/js/plugins/smooth-scrollbar.min.js')}}"></script>

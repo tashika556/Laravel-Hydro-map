@@ -23,7 +23,7 @@
                         @method('PUT')
 
                         <div class="row">
-                        <div class="col-4">
+                        <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">Company Name</label>
                     <input type="text" name="company_name" class="form-control" value="{{$company_details['company_name']}}">

@@ -14,7 +14,7 @@
 @section('container')
 <div class="container-fluid">
     <div class="row">
-        <div class="col-10">
+        <div class="col-md-10 col-12">
             <table class="bg-white table">
                 <thead>
                     <tr>

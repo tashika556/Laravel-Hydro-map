@@ -18,7 +18,7 @@
 </section>
 @endsection
 
-<section class="relative bg-gray-200">
+<section class="image-bg relative bg-gray-200">
     <div class="mx-auto max-w-7xl lg:px-0 md:px-8 px-5">
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 gap-4">
 
@@ -26,7 +26,7 @@
             <div class="col-span-1">
                 <div class=" bg-white mb-md-4 mb-3 relative">
                     <div class="news_img">
-                        <img src="{{asset('uploads/blogdetails/'.$company->image)}}" class="img-fluid w-full">
+                        <img src="{{asset('public/uploads/blogdetails/'.$company->image)}}" class="img-fluid w-full">
                     </div>
                     <div class="blog_date">
                         <h5><strong>{{$company['date']}}</strong> <span>{{$company['month']}}</span></h5>

@@ -14,7 +14,7 @@
         </div>
     </div>
 </section>
-<section>
+<section class="relative">
     <div class="mx-auto max-w-7xl lg:px-0 md:px-8 px-5">
         <div class="grid grid-cols-3 gap-8">
 
@@ -25,7 +25,7 @@
                 <div class="gallery_img-main">
 
                     <a href="gallerydetails/{{$gallery->id}}">
-                    <img src="{{ asset('images/' . $gallery->featured_image) }}" alt="{{$gallery->name}}">
+                    <img src="{{ asset('public/images/' . $gallery->featured_image) }}" alt="{{$gallery->name}}">
                     </a>
        
                 </div>

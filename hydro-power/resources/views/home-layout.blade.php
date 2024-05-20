@@ -84,11 +84,24 @@
 </footer>
 <div class="footer_bottom bg-gray-900 py-4">
     <div class="mx-auto max-w-7xl lg:px-0 md:px-8 px-5">
-        <div class="flex justify-between lg:flex-row flex-col">
-            <p class="text-center text-gray-300">©2024 Hydropower | All rights reserved.</p>
-            <p class="text-center text-gray-300"> || Website by <a href="http://archiesoft.com.np/">ArchieSoft Technology</a></p>
+        <div class="flex justify-center lg:flex-row flex-col">
+            <p class="text-center text-gray-300">©2024 Hydropower   |  All rights reserved.  ||  Website by <a href="http://archiesoft.com.np/" target="_blank">ArchieSoft Technology</a></p>
+
+          
+        </div>
+        <div class="flex justify-center lg:flex-row flex-col">
+            <p class="text-center text-gray-400">This mapping has been produced in the partnership of <a href="https://cemsoj.wordpress.com/" target="_blank">CEMSOJ</a>
+             and <a href="http://www.aipnee.org/" target="_blank">AIPNEE</a>. With Support 
+                From <a href="https://rightenergypartnership.org/" target="_blank">REP</a>, <a href="https://www.rafto.no/en/" target="_blank">Rafto Foundation</a>
+                    & <a href="https://www.defenderscollaborative.org/" target="_blank">Environmental Defenders Collaborative.</a></p>
+    
         </div>
 
+        <div class="flex justify-center lg:flex-row flex-col">
+            <p class="text-center text-gray-400">This map is based on information from working with the communities or that available online. If you have any comments,
+                 you can send to us at <a href="mailto:cemsoj@gmail.com." target="_blank">cemsoj@gmail.com.</a></p>
+    
+        </div>
     </div>
 </div>
 <!-- mobile menu start  -->

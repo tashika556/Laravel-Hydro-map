@@ -65,8 +65,12 @@ public function search(Request $request)
     $searchTerm = $request->input('search');
 
     $projects = Project::with(['companies', 'international_finances'])
-        ->where('project_name', 'like', "%$searchTerm%")
-        ->orWhere('location', 'like', "%$searchTerm%")
+        ->where(function($query) use ($searchTerm) {
+            $query->where('project_name', 'like', "%$searchTerm%")
+                  ->orWhere('location', 'like', "%$searchTerm%")
+                  ->orWhere('affected_communities', 'like', "%$searchTerm%")
+                  ->orWhere('government_actors', 'like', "%$searchTerm%");
+        })
         ->get();
 
     return response()->json($projects);

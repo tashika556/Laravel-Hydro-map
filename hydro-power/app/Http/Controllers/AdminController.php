@@ -49,6 +49,29 @@ class AdminController extends Controller
         $projects=Project::count();
         return view('admin.dashboard',compact('companies','finances','projects'));
     }
-
+    public function updatePasswordForm()
+    {
+        return view('admin.updatepsd');
+    }
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'current_password' => 'required',
+            'new_password' => 'required|min:6',
+        ]);
+    
+        $adminId = session('ADMIN_ID');
+        $admin = Admin::find($adminId);
+    
+        if (!$admin || !Hash::check($request->current_password, $admin->password)) {
+            return redirect()->back()->with('error', 'Current password is incorrect.');
+        }
+    
+        // Update the password
+        $admin->password = Hash::make($request->new_password);
+        $admin->save();
+    
+        return redirect()->back()->with('success', 'Password updated successfully.');
+    }
 
 }

@@ -25,8 +25,8 @@
         @foreach($gallery->photos as $photo)
     <div class="col-span-1">
         <div class="img-wrapper">
-            <a href="{{ asset('images/' . $photo->image) }}" data-lightbox="gallery" data-title="Image {{ $loop->iteration }}">
-                <img src="{{ asset('images/' . $photo->image) }}" class="img-responsive">
+            <a href="{{ asset('public/images/' . $photo->image) }}" data-lightbox="gallery" data-title="Image {{ $loop->iteration }}">
+                <img src="{{ asset('public/images/' . $photo->image) }}" class="img-responsive">
             </a>
         </div>
     </div>

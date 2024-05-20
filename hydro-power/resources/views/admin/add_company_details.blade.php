@@ -16,7 +16,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-4">
+        <div class="col-md-4 col-12">
         <div class="bg-white p-4">
         <form action="{{route('added_company')}}" method="post" enctype="multipart/form-data">
                 @csrf

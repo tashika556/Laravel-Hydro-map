@@ -21,7 +21,7 @@
                     <form action="{{route('added_project')}}" enctype="multipart/form-data" method="POST">
                         @csrf
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Project Name</label>
                                     <input type="text" name="project_name" class="form-control" required>
@@ -29,7 +29,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Latitude</label>
                                     <input type="text" name="latitude" class="form-control" required>
@@ -37,7 +37,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Longitude</label>
                                     <input type="text" name="longitude" class="form-control" required>
@@ -47,27 +47,27 @@
 
 
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Description</label>
                                     <textarea name="description" class="form-control"></textarea>
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Summary</label>
                                     <textarea name="summary" class="form-control"></textarea>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Project Impacts</label>
                                     <textarea name="impacts" class="form-control"></textarea>
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Advocacies Undertaken</label>
                                     <textarea name="advocacies_undertaken" class="form-control"></textarea>
@@ -75,42 +75,42 @@
                             </div>
 
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Rights violated as per national/international laws</label>
                                     <textarea name="rights" class="form-control"></textarea>
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Location</label>
                                     <input type="text" name="location" class="form-control">
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Budget</label>
                                     <input type="text" name="budget" class="form-control">
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Affected Communities</label>
                                     <input type="text" name="affected_communities" class="form-control">
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Start of Conflict</label>
                                     <input type="text" name="conflict_start" class="form-control">
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
     <div class="form-group mb-4">
         <label for="title">Company Name</label>
         @foreach($data['companies'] as $company)
@@ -123,14 +123,14 @@
 </div>
 
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Relevant Government Actors</label>
                                     <textarea name="government_actors" class="form-control"></textarea>
                                 </div>
                             </div>
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
     <div class="form-group mb-4">
         <label for="title">International Financiers</label>
         @foreach($dataa['financiers'] as $financier)
@@ -143,19 +143,21 @@
 </div>
 
 
-                            <div class="col-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Advocacy Organizations</label>
                                     <textarea name="advocacy_org" class="form-control"></textarea>
                                 </div>
                             </div>
 
-                            <div class="col-4">
-                                <div class="form-group mb-4">
-                                    <label for="title">Relevant Links</label>
-                                    <textarea name="relevant_link" class="form-control"></textarea>
-                                </div>
-                            </div>
+                      <div class="col-md-4 col-12">
+    <div class="form-group mb-4">
+        <label for="title">Relevant Links</label>
+        <textarea name="relevant_link" id="relevant_link" class="form-control"></textarea>
+        <button type="button" onclick="addLink()">Add Link</button>
+    </div>
+</div>
+
 
                         </div>
 

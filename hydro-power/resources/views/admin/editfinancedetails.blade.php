@@ -23,7 +23,7 @@
                         @method('PUT')
 
                         <div class="row">
-                        <div class="col-4">
+                        <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                 <label for="modelyear">International Financiers Name</label>
                     <input type="text" name="fin_name" class="form-control" value="{{$finance_details['fin_name']}}">
