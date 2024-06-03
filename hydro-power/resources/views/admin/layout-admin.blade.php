@@ -17,6 +17,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <link id="pagestyle" href="{{asset('admin_assets/css/material-dashboard.css')}}?v=3.1.0" rel="stylesheet" />
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+
+ 
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -44,7 +46,7 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
-            <span class="nav-link-text ms-1">Company </span>
+            <span class="nav-link-text ms-1">Business/Enterprises  <br> Involved</span>
           </a>
         </li>
         <li class="nav-item">
@@ -52,7 +54,7 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">receipt_long</i>
             </div>
-            <span class="nav-link-text ms-1">International Financiers</span>
+            <span class="nav-link-text ms-1">Financiers Involved</span>
           </a>
         </li>
         <li class="nav-item">
@@ -144,7 +146,8 @@
  
   </main>
  
-<script src="https://cdn.tiny.cloud/1/YOUR_API_KEY/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+
 
   <script src="{{asset('admin_assets/js/core/popper.min.js')}}"></script>
   <script src="{{asset('admin_assets/js/core/bootstrap.min.js')}}"></script>
@@ -153,9 +156,21 @@
   <script src="{{asset('admin_assets/js/plugins/chartjs.min.js')}}"></script>
 <script src="{{asset('admin_assets/js/main.js')}}"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <script src="{{asset('admin_assets/js/material-dashboard.min.js?v=3.1.0"></script>
+  <script src="{{asset('admin_assets/js/material-dashboard.min.js?v=3.1.0')}}"></script>
     <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    <script>
+    // Initialize CKEditor
+    CKEDITOR.replace('description');
+    CKEDITOR.replace('summary');
+    CKEDITOR.replace('impacts');
+    CKEDITOR.replace('relevant_link');
+    CKEDITOR.replace('advocacy_org');
+    CKEDITOR.replace('rights');
+    CKEDITOR.replace('advocacies_undertaken');
+    CKEDITOR.replace('government_actors');
+</script>
 <script>
     let uniqueImageId = 0; // Initialize a counter for unique image IDs
 
@@ -282,32 +297,7 @@ $(document).ready(function () {
            });
        });
 
-    function addLink() {
-        var linkText = prompt("Enter the link text:");
-        if (linkText === null) {
-            return; // User clicked Cancel
-        }
 
-        var linkUrl = prompt("Enter the link URL:");
-        if (linkUrl === null) {
-            return; // User clicked Cancel
-        }
-
-        var textarea = document.getElementById("relevant_link");
-        var currentText = textarea.value;
-
-        // Insert the link at the current cursor position
-        var startPos = textarea.selectionStart;
-        var endPos = textarea.selectionEnd;
-
-  var newText =
-    currentText.substring(0, startPos) +
-    '<a href="' + linkUrl + '" target="_blank">' + linkText + '</a>' +'<br>'
-    currentText.substring(endPos);
-
-
-        textarea.value = newText;
-    }
     
  
    </script>

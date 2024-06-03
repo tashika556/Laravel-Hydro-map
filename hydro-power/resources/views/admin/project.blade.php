@@ -21,7 +21,7 @@
                             <th class="border">S.No.</th>
                             <th class="border">Project Name</th>
                          
-            
+                            <th class="border">Date of project Entry/Update</th>
                             <th class="border">Actions</th>
                         </tr>
                     </thead>
@@ -30,8 +30,8 @@
                         <tr>
                             <td class="border">{{$loop->index+1}}</td>
                             <td  class="border">{{ $member->project_name }}</td>
+                            <td  class="border">{{ $member->dateentry }}</td>
              
-                 
 <td  class="border">
 <a href="{{url('admin/editprojectdetails')}}/{{$member->id}}" class="btn btn-success">Edit</a>
                         <a href="{{url('admin/project/delete')}}/{{$member->id}}" class="btn btn-danger" title="Delete">Delete</a>

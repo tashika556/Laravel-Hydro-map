@@ -1,11 +1,11 @@
 @extends('admin/layout-admin')
-@section('page_title','Company List')
+@section('page_title','Business/Enterprises Involved List')
 
 @section('content')
 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="pe-md-3 d-flex align-items-center">
           <a href="{{route('add_company')}}">
-  <button class="btn btn-danger">Add Company Details</button>
+  <button class="btn btn-danger">Add Business/Enterprises Involved Details</button>
 </a>
           </div>
 @endsection
@@ -19,7 +19,7 @@
                 <thead>
                     <tr>
                         <th>S.No.</th>
-                        <th>Company Name</th>
+                        <th>Business/Enterprises Involved Name</th>
                         <th>Actions</th>
                     </tr>
                 </thead>

@@ -11,7 +11,7 @@
                 <i class="material-icons opacity-10">weekend</i>
               </div>
               <div class="text-end pt-1">
-              <h4 class="mb-0 text-capitalize text-gray-500">Company</h4>
+              <h4 class="mb-0 text-capitalize text-gray-500">Business/Enterprises Involved</h4>
                 <h4 class="mb-0">{{$companies}}</h4>
               </div>
             </div>
@@ -26,7 +26,7 @@
                 <i class="material-icons opacity-10">person</i>
               </div>
               <div class="text-end pt-1">
-              <h4 class="mb-0 text-capitalize text-gray-500">International Financiers</h4>
+              <h4 class="mb-0 text-capitalize text-gray-500">Financiers Involved</h4>
                 <h4 class="mb-0">{{$finances}}</h4>
               </div>
             </div>

@@ -13,7 +13,7 @@
 
     @section('container')
 
-
+    <x-forms.tinymce-editor />
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -50,14 +50,14 @@
                             <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Description</label>
-                                    <textarea name="description" class="form-control"></textarea>
+                                    <textarea name="description" class="form-control" id="description"> </textarea>
                                 </div>
                             </div>
 
                             <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
                                     <label for="title">Summary</label>
-                                    <textarea name="summary" class="form-control"></textarea>
+                                    <textarea name="summary" class="form-control" id="myeditorinstance"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-4 col-12">
@@ -111,16 +111,18 @@
                             </div>
 
                             <div class="col-md-4 col-12">
-    <div class="form-group mb-4">
-        <label for="title">Company Name</label>
-        @foreach($data['companies'] as $company)
-            <div class="d-flex items-center py-3">
-                <input type="checkbox" name="companies[]" class="company-checkbox input_width border-gray-300 rounded" value="{{$company->id}}" />
-                <span class="mx-1">{{$company->company_name}}</span>
-            </div>
-        @endforeach
-    </div>
-</div>
+                                <div class="form-group mb-4">
+                                    <label for="title">Company Name</label>
+                                    @foreach($data['companies'] as $company)
+                                    <div class="d-flex items-center py-3">
+                                        <input type="checkbox" name="companies[]"
+                                            class="company-checkbox input_width border-gray-300 rounded"
+                                            value="{{$company->id}}" />
+                                        <span class="mx-1">{{$company->company_name}}</span>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
 
 
                             <div class="col-md-4 col-12">
@@ -131,16 +133,17 @@
                             </div>
 
                             <div class="col-md-4 col-12">
-    <div class="form-group mb-4">
-        <label for="title">International Financiers</label>
-        @foreach($dataa['financiers'] as $financier)
-            <div class="d-flex items-center py-3">
-                <input type="checkbox" name="international_finances[]" class="input_width border-gray-300 rounded" value="{{$financier->id}}" />
-                <span class="mx-1">{{$financier->fin_name}}</span>
-            </div>
-        @endforeach
-    </div>
-</div>
+                                <div class="form-group mb-4">
+                                    <label for="title">International Financiers</label>
+                                    @foreach($dataa['financiers'] as $financier)
+                                    <div class="d-flex items-center py-3">
+                                        <input type="checkbox" name="international_finances[]"
+                                            class="input_width border-gray-300 rounded" value="{{$financier->id}}" />
+                                        <span class="mx-1">{{$financier->fin_name}}</span>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
 
 
                             <div class="col-md-4 col-12">
@@ -150,27 +153,41 @@
                                 </div>
                             </div>
 
-                      <div class="col-md-4 col-12">
-    <div class="form-group mb-4">
-        <label for="title">Relevant Links</label>
-        <textarea name="relevant_link" id="relevant_link" class="form-control"></textarea>
-        <button type="button" onclick="addLink()">Add Link</button>
-    </div>
-</div>
+                            <div class="col-md-4 col-12">
+                                <div class="form-group mb-4">
+                                    <label for="title">Relevant Links</label>
+                                    <textarea name="relevant_link" class="form-control"></textarea>
 
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-12">
+                                <div class="form-group mb-4">
+                                    <label for="image">Upload Icon</label>
+                                    <input type="file" name="icon" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-12">
+                                <div class="form-group mb-4">
+                                    <label for="date">Date of project Entry/Update</label>
+                                    <input type="date" name="dateentry" class="form-control">
+                                </div>
+                            </div>
 
                         </div>
 
                         <div class="form-group">
                             <input type="submit" class="btn btn-danger" value="Add Project Details">
                         </div>
-                        
+
                         @if(Session::has('success'))
-                <button class="btn btn-success">{{Session::get('success')}}</button>    @endif  
+                        <button class="btn btn-success">{{Session::get('success')}}</button> @endif
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
 
     @endsection

@@ -31,53 +31,11 @@ class InternationalFinancesController extends Controller
     }
     public function store(Request $request)
     {
+        
         $finance_details = new InternationalFinances;
         $finance_details->fin_name = $request->input('fin_name');
     
-        // Array of FontAwesome icon classes representing shapes
-        $shapeIcons = [
-            'fa fa-square',
-            'fa fa-circle',
-'fa fa-plus-square',
-
-            'fa fa-star',
-            'fa fa-stop-circle',
-            'fa fa-eject',
-            'fa fa-play',
-            'fa fa-chevron-circle-left',
-            'fa fa-times',
-            'fa fa-plus',
-     'fa fa-th-large',
-     'fa fa-file',
-     'fa fa-map',
-     'fa fa-archive',
-     'fa fa-bookmark',
-'fa fa-arrows',
-'fa fa-check-circle',
-'fa fa-cloud',
-'fa fa-certificate',
-'fa fa-flag',
-'fa fa-filter',
-'fa fa-paper-plane',
-'fa fa-building',
-'fa fa-compass',
-'fa fa-backward',
-'fa fa-book-open',
-'fa fa-map-marker',
-'fa fa-bandcamp',
-            // Add more shapes as needed
-        ];
-    
-        do {
-        // Pick a random icon
-        $randomShapeIcon = $shapeIcons[array_rand($shapeIcons)];
-
-        // Check if the icon already exists in the database
-        $existingFinance = InternationalFinances::where('fin_icon', $randomShapeIcon)->first();
-    } while ($existingFinance);
-
-
-        $finance_details->fin_icon = $randomShapeIcon;
+     
     
         $finance_details->save();
 

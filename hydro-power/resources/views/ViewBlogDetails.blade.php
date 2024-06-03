@@ -24,7 +24,7 @@
             <div class="col-start-2 col-span-5">
                 <div class="news_block bg-white mb-md-4 mb-3">
                     <div class="blog_detail">
-                        <img src="/public//uploads/blogdetails/{{$blog_details->image}}" class="img-fluid w-full">
+                        <img src="/public/uploads/blogdetails/{{$blog_details->image}}" class="img-fluid w-full">
                     </div>
 
                     <div class="news_content p-md-5 p-4">

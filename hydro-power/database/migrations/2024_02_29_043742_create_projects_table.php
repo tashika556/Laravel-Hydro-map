@@ -30,6 +30,7 @@ class CreateProjectsTable extends Migration
             $table->longText('government_actors');
             $table->longText('advocacy_org');
             $table->longText('relevant_link');
+            $table->string('icon')->nullable();
             $table->timestamps();
         });
     }

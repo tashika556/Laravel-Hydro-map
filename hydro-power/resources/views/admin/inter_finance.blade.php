@@ -1,11 +1,11 @@
 @extends('admin/layout-admin')
-@section('page_title','International Financiers List')
+@section('page_title','Financiers Involved List')
 
 @section('content')
 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="pe-md-3 d-flex align-items-center">
           <a href="{{route('add_finance')}}">
-  <button class="btn btn-danger">Add International Financiers</button>
+  <button class="btn btn-danger">Add Financiers Involved</button>
 </a>
           </div>
 @endsection
@@ -19,9 +19,8 @@
                 <thead>
                     <tr>
                         <th>S.No.</th>
-                        <th>International Financiers</th>
+                        <th>Financiers Involved</th>
 
-                        <th>Icon</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -32,7 +31,7 @@
             <td>{{$loop->index+1}}</td>
                 <td>{{ $member->fin_name }}</td>
 
-                <td><i class="{{ $member->fin_icon }}"></i></td>
+          
 
                         <td>
                         <a href="{{url('admin/editfinancedetails')}}/{{$member->id}}" class="btn btn-success">Edit</a>

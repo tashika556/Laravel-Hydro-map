@@ -25,11 +25,7 @@ class CompanyController extends Controller
     {
         $company_details = new Companies;
         $company_details->company_name = $request->input('company_name');
-        
-        // Generate a random color (hex format)
-        $randomColor = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
-        
-        $company_details->icon = $randomColor;
+    
         
         $company_details->save();
         

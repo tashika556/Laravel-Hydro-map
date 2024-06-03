@@ -1,5 +1,5 @@
 @extends('admin/layout-admin')
-@section('page_title','Edit Company Details')
+@section('page_title','Edit Business/Enterprises Involved Details')
 
 @section('content')
 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
@@ -25,19 +25,15 @@
                         <div class="row">
                         <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
-                                <label for="modelyear">Company Name</label>
+                                <label for="modelyear">Business/Enterprises Involved Name</label>
                     <input type="text" name="company_name" class="form-control" value="{{$company_details['company_name']}}">
 
                                 </div>
                             </div>
 
-                       
-                      
-                                              
-
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn btn-danger" value="Edit Company Details">
+                            <input type="submit" class="btn btn-danger" value="Edit Business/Enterprises Involved Details">
                         </div>
 
                         @if(Session::has('success'))

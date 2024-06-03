@@ -1,5 +1,5 @@
 @extends('admin/layout-admin')
-@section('page_title','Edit International Financiers Details')
+@section('page_title','Edit Financiers Involved Details')
 
 @section('content')
 <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
@@ -25,7 +25,7 @@
                         <div class="row">
                         <div class="col-md-4 col-12">
                                 <div class="form-group mb-4">
-                                <label for="modelyear">International Financiers Name</label>
+                                <label for="modelyear">Financiers Involved Name</label>
                     <input type="text" name="fin_name" class="form-control" value="{{$finance_details['fin_name']}}">
 
                                 </div>
@@ -37,7 +37,7 @@
 
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn btn-danger" value="Edit finance Details">
+                            <input type="submit" class="btn btn-danger" value="Edit Financiers Involved Details">
                         </div>
 
                         @if(Session::has('success'))
